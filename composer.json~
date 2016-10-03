@@ -1,4 +1,6 @@
 {
+	"name": "kaushal4/yii2",
+	"description": "Yii2 For Cluewiz",
 	"repositories": [
 		{
 			"type": "package",
