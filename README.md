@@ -1,6 +1,7 @@
 Yii PHP Framework Version 2
 ===========================
 
+
 This is the core framework code of [Yii 2](https://github.com/kaushal4/yii2#readme).
 
 This repository is a read-only git subsplit of <https://github.com/kaushal4/yii2>.
