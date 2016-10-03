@@ -23,7 +23,7 @@ composer require kaushal4/yii2
 or add
 
 ```json
-"kaushal4/yii2": "~2.0.0",
+"kaushal4/yii2": "*",
 ```
 
 to the require section of your composer.json.
