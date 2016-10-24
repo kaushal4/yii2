@@ -80,6 +80,7 @@ class ColumnSchemaBuilder extends Object
     public $noCopy;
     public $translate;
     public $track;
+    public $readonly;
     /**
      * @var array mapping of abstract column types (keys) to type categories (values).
      * @since 2.0.8
@@ -161,6 +162,16 @@ class ColumnSchemaBuilder extends Object
     public function track()
     {
         $this->track = true;
+        return $this;
+    }
+
+    /**
+     * Adds a `No Copy` constraint to the column.
+     * @return $this
+     */
+    public function readonly()
+    {
+        $this->readonly = true;
         return $this;
     }
     
@@ -489,3 +500,4 @@ class ColumnSchemaBuilder extends Object
         ];
     }
 }
+
