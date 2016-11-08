@@ -81,6 +81,7 @@ class ColumnSchemaBuilder extends Object
     public $translate;
     public $track;
     public $readonly;
+    public $selection;
     /**
      * @var array mapping of abstract column types (keys) to type categories (values).
      * @since 2.0.8
@@ -146,6 +147,16 @@ class ColumnSchemaBuilder extends Object
     }
 
     /**
+     * Adds a `NOT NULL` constraint to the column.
+     * @return $this
+     */
+    public function selection($selection)
+    {
+        $this->selection = $selection;
+        return $this;
+    }
+
+    /**
      * Adds a `No Copy` constraint to the column.
      * @return $this
      */
@@ -156,7 +167,7 @@ class ColumnSchemaBuilder extends Object
     }
 
     /**
-     * Adds a `No Copy` constraint to the column.
+     * Adds a `track` constraint to the column.
      * @return $this
      */
     public function track()
@@ -166,7 +177,7 @@ class ColumnSchemaBuilder extends Object
     }
 
     /**
-     * Adds a `No Copy` constraint to the column.
+     * Adds a `readonly` constraint to the column.
      * @return $this
      */
     public function readonly()
@@ -500,4 +511,5 @@ class ColumnSchemaBuilder extends Object
         ];
     }
 }
+
 
