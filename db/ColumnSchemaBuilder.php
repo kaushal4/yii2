@@ -82,6 +82,8 @@ class ColumnSchemaBuilder extends Object
     public $track;
     public $readonly;
     public $selection;
+    public $states;
+    public $groups = '';
     /**
      * @var array mapping of abstract column types (keys) to type categories (values).
      * @since 2.0.8
@@ -147,12 +149,31 @@ class ColumnSchemaBuilder extends Object
     }
 
     /**
-     * Adds a `NOT NULL` constraint to the column.
+     * Adds a `selection` constraint to the column.
      * @return $this
      */
     public function selection($selection)
     {
         $this->selection = $selection;
+        return $this;
+    }
+    
+    /**
+     * Adds a `states` constraint to the column.
+     * @return $this
+     */
+    public function states($states)
+    {
+        $this->states = $states;
+        return $this;
+    }
+    /**
+     * Adds a `states` constraint to the column.
+     * @return $this
+     */
+    public function groups($groups)
+    {
+        $this->groups = $groups;
         return $this;
     }
 
@@ -511,5 +532,6 @@ class ColumnSchemaBuilder extends Object
         ];
     }
 }
+
 
 
